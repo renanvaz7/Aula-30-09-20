@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ibtnSair = new FontAwesome.Sharp.IconButton();
             this.ibtnOrders = new FontAwesome.Sharp.IconButton();
             this.ibtnFerramentas = new FontAwesome.Sharp.IconButton();
@@ -37,17 +39,17 @@
             this.ibtnClientes = new FontAwesome.Sharp.IconButton();
             this.ibtnProdutos = new FontAwesome.Sharp.IconButton();
             this.ibtnDashboard = new FontAwesome.Sharp.IconButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pnlContent = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelBody = new System.Windows.Forms.Panel();
+            this.panelTop = new System.Windows.Forms.Panel();
+            this.panelDiv = new System.Windows.Forms.Panel();
             this.pnlMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
             // 
-            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(31)))), ((int)(((byte)(68)))));
             this.pnlMenu.Controls.Add(this.panel1);
             this.pnlMenu.Controls.Add(this.ibtnSair);
             this.pnlMenu.Controls.Add(this.ibtnOrders);
@@ -62,6 +64,25 @@
             this.pnlMenu.Size = new System.Drawing.Size(168, 611);
             this.pnlMenu.TabIndex = 0;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(168, 105);
+            this.panel1.TabIndex = 6;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(34, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(97, 86);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // ibtnSair
             // 
             this.ibtnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(31)))), ((int)(((byte)(68)))));
@@ -74,7 +95,7 @@
             this.ibtnSair.IconColor = System.Drawing.Color.Gainsboro;
             this.ibtnSair.IconSize = 40;
             this.ibtnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnSair.Location = new System.Drawing.Point(0, 504);
+            this.ibtnSair.Location = new System.Drawing.Point(0, 470);
             this.ibtnSair.Name = "ibtnSair";
             this.ibtnSair.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.ibtnSair.Rotation = 0D;
@@ -97,7 +118,7 @@
             this.ibtnOrders.IconColor = System.Drawing.Color.Gainsboro;
             this.ibtnOrders.IconSize = 40;
             this.ibtnOrders.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnOrders.Location = new System.Drawing.Point(0, 229);
+            this.ibtnOrders.Location = new System.Drawing.Point(0, 220);
             this.ibtnOrders.Name = "ibtnOrders";
             this.ibtnOrders.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.ibtnOrders.Rotation = 0D;
@@ -120,7 +141,7 @@
             this.ibtnFerramentas.IconColor = System.Drawing.Color.Gainsboro;
             this.ibtnFerramentas.IconSize = 40;
             this.ibtnFerramentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnFerramentas.Location = new System.Drawing.Point(0, 448);
+            this.ibtnFerramentas.Location = new System.Drawing.Point(0, 420);
             this.ibtnFerramentas.Name = "ibtnFerramentas";
             this.ibtnFerramentas.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.ibtnFerramentas.Rotation = 0D;
@@ -143,7 +164,7 @@
             this.ibtnMarketing.IconColor = System.Drawing.Color.Gainsboro;
             this.ibtnMarketing.IconSize = 40;
             this.ibtnMarketing.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnMarketing.Location = new System.Drawing.Point(0, 392);
+            this.ibtnMarketing.Location = new System.Drawing.Point(0, 370);
             this.ibtnMarketing.Name = "ibtnMarketing";
             this.ibtnMarketing.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.ibtnMarketing.Rotation = 0D;
@@ -166,7 +187,7 @@
             this.ibtnClientes.IconColor = System.Drawing.Color.Gainsboro;
             this.ibtnClientes.IconSize = 40;
             this.ibtnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnClientes.Location = new System.Drawing.Point(0, 336);
+            this.ibtnClientes.Location = new System.Drawing.Point(0, 320);
             this.ibtnClientes.Name = "ibtnClientes";
             this.ibtnClientes.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.ibtnClientes.Rotation = 0D;
@@ -189,7 +210,7 @@
             this.ibtnProdutos.IconColor = System.Drawing.Color.Gainsboro;
             this.ibtnProdutos.IconSize = 40;
             this.ibtnProdutos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnProdutos.Location = new System.Drawing.Point(0, 285);
+            this.ibtnProdutos.Location = new System.Drawing.Point(0, 270);
             this.ibtnProdutos.Name = "ibtnProdutos";
             this.ibtnProdutos.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.ibtnProdutos.Rotation = 0D;
@@ -212,7 +233,7 @@
             this.ibtnDashboard.IconColor = System.Drawing.Color.Gainsboro;
             this.ibtnDashboard.IconSize = 40;
             this.ibtnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnDashboard.Location = new System.Drawing.Point(0, 173);
+            this.ibtnDashboard.Location = new System.Drawing.Point(0, 170);
             this.ibtnDashboard.Name = "ibtnDashboard";
             this.ibtnDashboard.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.ibtnDashboard.Rotation = 0D;
@@ -223,45 +244,47 @@
             this.ibtnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ibtnDashboard.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
+            // panelBody
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(34, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(97, 86);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.panelBody.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.panelBody.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelBody.Location = new System.Drawing.Point(168, 0);
+            this.panelBody.Name = "panelBody";
+            this.panelBody.Size = new System.Drawing.Size(735, 611);
+            this.panelBody.TabIndex = 2;
             // 
-            // pnlContent
+            // panelTop
             // 
-            this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContent.Location = new System.Drawing.Point(168, 0);
-            this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(735, 611);
-            this.pnlContent.TabIndex = 1;
+            this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(31)))), ((int)(((byte)(68)))));
+            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTop.Location = new System.Drawing.Point(168, 0);
+            this.panelTop.Name = "panelTop";
+            this.panelTop.Size = new System.Drawing.Size(735, 92);
+            this.panelTop.TabIndex = 3;
             // 
-            // panel1
+            // panelDiv
             // 
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(168, 105);
-            this.panel1.TabIndex = 6;
+            this.panelDiv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
+            this.panelDiv.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelDiv.Location = new System.Drawing.Point(168, 92);
+            this.panelDiv.Name = "panelDiv";
+            this.panelDiv.Size = new System.Drawing.Size(735, 10);
+            this.panelDiv.TabIndex = 4;
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(903, 611);
-            this.Controls.Add(this.pnlContent);
+            this.Controls.Add(this.panelDiv);
+            this.Controls.Add(this.panelTop);
+            this.Controls.Add(this.panelBody);
             this.Controls.Add(this.pnlMenu);
             this.Name = "Principal";
             this.Text = "Form1";
             this.pnlMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -269,7 +292,6 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlMenu;
-        private System.Windows.Forms.Panel pnlContent;
         private System.Windows.Forms.PictureBox pictureBox1;
         private FontAwesome.Sharp.IconButton ibtnDashboard;
         private FontAwesome.Sharp.IconButton ibtnOrders;
@@ -279,6 +301,9 @@
         private FontAwesome.Sharp.IconButton ibtnProdutos;
         private FontAwesome.Sharp.IconButton ibtnSair;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelBody;
+        private System.Windows.Forms.Panel panelTop;
+        private System.Windows.Forms.Panel panelDiv;
     }
 }
 
