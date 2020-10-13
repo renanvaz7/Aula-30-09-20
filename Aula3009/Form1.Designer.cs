@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ibtnSair = new FontAwesome.Sharp.IconButton();
             this.ibtnOrders = new FontAwesome.Sharp.IconButton();
@@ -39,18 +39,18 @@
             this.ibtnClientes = new FontAwesome.Sharp.IconButton();
             this.ibtnProdutos = new FontAwesome.Sharp.IconButton();
             this.ibtnDashboard = new FontAwesome.Sharp.IconButton();
-            this.panelBody = new System.Windows.Forms.Panel();
-            this.panelTop = new System.Windows.Forms.Panel();
-            this.panelDiv = new System.Windows.Forms.Panel();
+            this.pnlTop = new System.Windows.Forms.Panel();
+            this.pnlMid = new System.Windows.Forms.Panel();
+            this.pnlBody = new System.Windows.Forms.Panel();
             this.pnlMenu.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(31)))), ((int)(((byte)(68)))));
-            this.pnlMenu.Controls.Add(this.panel1);
+            this.pnlMenu.Controls.Add(this.panelLogo);
             this.pnlMenu.Controls.Add(this.ibtnSair);
             this.pnlMenu.Controls.Add(this.ibtnOrders);
             this.pnlMenu.Controls.Add(this.ibtnFerramentas);
@@ -63,15 +63,16 @@
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(168, 611);
             this.pnlMenu.TabIndex = 0;
+            this.pnlMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlMenu_MouseDown);
             // 
-            // panel1
+            // panelLogo
             // 
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(168, 105);
-            this.panel1.TabIndex = 6;
+            this.panelLogo.Controls.Add(this.pictureBox1);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(168, 105);
+            this.panelLogo.TabIndex = 6;
             // 
             // pictureBox1
             // 
@@ -105,6 +106,7 @@
             this.ibtnSair.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ibtnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ibtnSair.UseVisualStyleBackColor = false;
+            this.ibtnSair.Click += new System.EventHandler(this.ibtnSair_Click);
             // 
             // ibtnOrders
             // 
@@ -128,6 +130,7 @@
             this.ibtnOrders.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ibtnOrders.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ibtnOrders.UseVisualStyleBackColor = false;
+            this.ibtnOrders.Click += new System.EventHandler(this.ibtnOrders_Click);
             // 
             // ibtnFerramentas
             // 
@@ -197,6 +200,7 @@
             this.ibtnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ibtnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ibtnClientes.UseVisualStyleBackColor = false;
+            this.ibtnClientes.Click += new System.EventHandler(this.ibtnClientes_Click);
             // 
             // ibtnProdutos
             // 
@@ -244,46 +248,47 @@
             this.ibtnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ibtnDashboard.UseVisualStyleBackColor = false;
             // 
-            // panelBody
+            // pnlTop
             // 
-            this.panelBody.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.panelBody.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelBody.Location = new System.Drawing.Point(168, 0);
-            this.panelBody.Name = "panelBody";
-            this.panelBody.Size = new System.Drawing.Size(735, 611);
-            this.panelBody.TabIndex = 2;
+            this.pnlTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(31)))), ((int)(((byte)(68)))));
+            this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTop.Location = new System.Drawing.Point(168, 0);
+            this.pnlTop.Name = "pnlTop";
+            this.pnlTop.Size = new System.Drawing.Size(735, 95);
+            this.pnlTop.TabIndex = 1;
+            this.pnlTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseDown);
             // 
-            // panelTop
+            // pnlMid
             // 
-            this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(31)))), ((int)(((byte)(68)))));
-            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTop.Location = new System.Drawing.Point(168, 0);
-            this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(735, 92);
-            this.panelTop.TabIndex = 3;
+            this.pnlMid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
+            this.pnlMid.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlMid.Location = new System.Drawing.Point(168, 95);
+            this.pnlMid.Name = "pnlMid";
+            this.pnlMid.Size = new System.Drawing.Size(735, 10);
+            this.pnlMid.TabIndex = 2;
             // 
-            // panelDiv
+            // pnlBody
             // 
-            this.panelDiv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
-            this.panelDiv.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelDiv.Location = new System.Drawing.Point(168, 92);
-            this.panelDiv.Name = "panelDiv";
-            this.panelDiv.Size = new System.Drawing.Size(735, 10);
-            this.panelDiv.TabIndex = 4;
+            this.pnlBody.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.pnlBody.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBody.Location = new System.Drawing.Point(168, 105);
+            this.pnlBody.Name = "pnlBody";
+            this.pnlBody.Size = new System.Drawing.Size(735, 506);
+            this.pnlBody.TabIndex = 3;
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(903, 611);
-            this.Controls.Add(this.panelDiv);
-            this.Controls.Add(this.panelTop);
-            this.Controls.Add(this.panelBody);
+            this.Controls.Add(this.pnlBody);
+            this.Controls.Add(this.pnlMid);
+            this.Controls.Add(this.pnlTop);
             this.Controls.Add(this.pnlMenu);
             this.Name = "Principal";
             this.Text = "Form1";
             this.pnlMenu.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -300,10 +305,10 @@
         private FontAwesome.Sharp.IconButton ibtnClientes;
         private FontAwesome.Sharp.IconButton ibtnProdutos;
         private FontAwesome.Sharp.IconButton ibtnSair;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panelBody;
-        private System.Windows.Forms.Panel panelTop;
-        private System.Windows.Forms.Panel panelDiv;
+        private System.Windows.Forms.Panel panelLogo;
+        private System.Windows.Forms.Panel pnlTop;
+        private System.Windows.Forms.Panel pnlMid;
+        private System.Windows.Forms.Panel pnlBody;
     }
 }
 

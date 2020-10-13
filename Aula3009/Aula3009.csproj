@@ -55,10 +55,28 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -69,6 +87,37 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Content\Fonts\fontawesome-webfont.eot" />
+    <None Include="Content\Fonts\fontawesome-webfont.ttf" />
+    <None Include="Content\Fonts\fontawesome-webfont.woff" />
+    <None Include="Content\Fonts\fontawesome-webfont.woff2" />
+    <None Include="Content\Fonts\FontAwesome.otf" />
+    <None Include="Content\Less\FontAwesome\animated.less" />
+    <None Include="Content\Less\FontAwesome\bordered-pulled.less" />
+    <None Include="Content\Less\FontAwesome\core.less" />
+    <None Include="Content\Less\FontAwesome\fixed-width.less" />
+    <None Include="Content\Less\FontAwesome\font-awesome.less" />
+    <None Include="Content\Less\FontAwesome\icons.less" />
+    <None Include="Content\Less\FontAwesome\larger.less" />
+    <None Include="Content\Less\FontAwesome\list.less" />
+    <None Include="Content\Less\FontAwesome\mixins.less" />
+    <None Include="Content\Less\FontAwesome\path.less" />
+    <None Include="Content\Less\FontAwesome\rotated-flipped.less" />
+    <None Include="Content\Less\FontAwesome\stacked.less" />
+    <None Include="Content\Less\FontAwesome\variables.less" />
+    <None Include="Content\Scss\FontAwesome\font-awesome.scss" />
+    <None Include="Content\Scss\FontAwesome\_animated.scss" />
+    <None Include="Content\Scss\FontAwesome\_bordered-pulled.scss" />
+    <None Include="Content\Scss\FontAwesome\_core.scss" />
+    <None Include="Content\Scss\FontAwesome\_fixed-width.scss" />
+    <None Include="Content\Scss\FontAwesome\_icons.scss" />
+    <None Include="Content\Scss\FontAwesome\_larger.scss" />
+    <None Include="Content\Scss\FontAwesome\_list.scss" />
+    <None Include="Content\Scss\FontAwesome\_mixins.scss" />
+    <None Include="Content\Scss\FontAwesome\_path.scss" />
+    <None Include="Content\Scss\FontAwesome\_rotated-flipped.scss" />
+    <None Include="Content\Scss\FontAwesome\_stacked.scss" />
+    <None Include="Content\Scss\FontAwesome\_variables.scss" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -82,6 +131,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\CSS\font-awesome.css" />
+    <Content Include="Content\CSS\font-awesome.min.css" />
+    <Content Include="Content\Fonts\fontawesome-webfont.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
