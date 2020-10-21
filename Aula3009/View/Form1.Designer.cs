@@ -40,11 +40,14 @@
             this.ibtnProdutos = new FontAwesome.Sharp.IconButton();
             this.ibtnDashboard = new FontAwesome.Sharp.IconButton();
             this.pnlTop = new System.Windows.Forms.Panel();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.ibtnHome = new FontAwesome.Sharp.IconButton();
             this.pnlMid = new System.Windows.Forms.Panel();
             this.pnlBody = new System.Windows.Forms.Panel();
             this.pnlMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlTop.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -73,6 +76,7 @@
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(168, 105);
             this.panelLogo.TabIndex = 6;
+            this.panelLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlMenu_MouseDown);
             // 
             // pictureBox1
             // 
@@ -83,6 +87,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlMenu_MouseDown);
             // 
             // ibtnSair
             // 
@@ -154,6 +159,7 @@
             this.ibtnFerramentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ibtnFerramentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ibtnFerramentas.UseVisualStyleBackColor = false;
+            this.ibtnFerramentas.Click += new System.EventHandler(this.ibtnFerramentas_Click);
             // 
             // ibtnMarketing
             // 
@@ -177,6 +183,7 @@
             this.ibtnMarketing.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ibtnMarketing.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ibtnMarketing.UseVisualStyleBackColor = false;
+            this.ibtnMarketing.Click += new System.EventHandler(this.ibtnMarketing_Click);
             // 
             // ibtnClientes
             // 
@@ -224,6 +231,7 @@
             this.ibtnProdutos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ibtnProdutos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ibtnProdutos.UseVisualStyleBackColor = false;
+            this.ibtnProdutos.Click += new System.EventHandler(this.ibtnProdutos_Click);
             // 
             // ibtnDashboard
             // 
@@ -247,16 +255,54 @@
             this.ibtnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ibtnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ibtnDashboard.UseVisualStyleBackColor = false;
+            this.ibtnDashboard.Click += new System.EventHandler(this.ibtnDashboard_Click);
             // 
             // pnlTop
             // 
             this.pnlTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(31)))), ((int)(((byte)(68)))));
+            this.pnlTop.Controls.Add(this.lblTitulo);
+            this.pnlTop.Controls.Add(this.ibtnHome);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(168, 0);
             this.pnlTop.Name = "pnlTop";
             this.pnlTop.Size = new System.Drawing.Size(735, 95);
             this.pnlTop.TabIndex = 1;
-            this.pnlTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseDown);
+            this.pnlTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlMenu_MouseDown);
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblTitulo.Location = new System.Drawing.Point(85, 28);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(102, 37);
+            this.lblTitulo.TabIndex = 8;
+            this.lblTitulo.Text = "Home";
+            this.lblTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlMenu_MouseDown);
+            // 
+            // ibtnHome
+            // 
+            this.ibtnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(31)))), ((int)(((byte)(68)))));
+            this.ibtnHome.FlatAppearance.BorderSize = 0;
+            this.ibtnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibtnHome.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.ibtnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ibtnHome.ForeColor = System.Drawing.Color.Gainsboro;
+            this.ibtnHome.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.ibtnHome.IconColor = System.Drawing.Color.Gainsboro;
+            this.ibtnHome.IconSize = 40;
+            this.ibtnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ibtnHome.Location = new System.Drawing.Point(19, 22);
+            this.ibtnHome.Name = "ibtnHome";
+            this.ibtnHome.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.ibtnHome.Rotation = 0D;
+            this.ibtnHome.Size = new System.Drawing.Size(86, 50);
+            this.ibtnHome.TabIndex = 7;
+            this.ibtnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ibtnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ibtnHome.UseVisualStyleBackColor = false;
+            this.ibtnHome.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlMenu_MouseDown);
             // 
             // pnlMid
             // 
@@ -266,6 +312,7 @@
             this.pnlMid.Name = "pnlMid";
             this.pnlMid.Size = new System.Drawing.Size(735, 10);
             this.pnlMid.TabIndex = 2;
+            this.pnlMid.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlMenu_MouseDown);
             // 
             // pnlBody
             // 
@@ -275,6 +322,7 @@
             this.pnlBody.Name = "pnlBody";
             this.pnlBody.Size = new System.Drawing.Size(735, 506);
             this.pnlBody.TabIndex = 3;
+            this.pnlBody.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlMenu_MouseDown);
             // 
             // Principal
             // 
@@ -286,10 +334,12 @@
             this.Controls.Add(this.pnlTop);
             this.Controls.Add(this.pnlMenu);
             this.Name = "Principal";
-            this.Text = "Form1";
+            this.Text = "Home";
             this.pnlMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlTop.ResumeLayout(false);
+            this.pnlTop.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -309,6 +359,8 @@
         private System.Windows.Forms.Panel pnlTop;
         private System.Windows.Forms.Panel pnlMid;
         private System.Windows.Forms.Panel pnlBody;
+        private FontAwesome.Sharp.IconButton ibtnHome;
+        private System.Windows.Forms.Label lblTitulo;
     }
 }
 

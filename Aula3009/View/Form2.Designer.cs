@@ -196,7 +196,7 @@
             this.ClientSize = new System.Drawing.Size(719, 467);
             this.Controls.Add(this.pnlContent);
             this.Name = "frmClientes";
-            this.Text = "Form2";
+            this.Text = "Clientes";
             this.pnlContent.ResumeLayout(false);
             this.pnlContent.PerformLayout();
             this.ResumeLayout(false);
